@@ -190,7 +190,7 @@
                         <td><?=$item->person?></td>
                         <th>Real</th>
                         <td>
-                        <?php if($item->operation_type == 1): ?>
+                        <?php if($item->operation_type == 1 or $user == 'admin'): ?>
                             <a href="<?=URL::base()?>cards/delete_op/<?=$item->id?>" class="btn btn-danger btn-mini"><i class="icon-trash icon-white"></i>Удалить</a>
                         <?php endif; ?>
                         </td>
