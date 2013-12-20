@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin:0;
+	padding:0;}
+	
+.margintopBot {
+	margin-top:0;
+	margin-bottom:0}
+	
+body {
+	font-family:Tahoma, Arial, Helvetica, sans-serif;}
+	
+.borderTop {
+	border-top:1px solid black;} 	
+
+img {
+	border:none;}
+	
+.alignCenter {
+	text-align:center;}
+	
+.vAlignTop {
+	vertical-align:top;}
+	
+.thead {
+	background-color:#B9DF6B;}
+	
+.colorWh {
+	color:#FFF;}
+	
+.lineh14{
+	line-height:14px;}
+	
+.font10 {
+	font-size:10px;}
+	
+.font12 {
+	font-size:12px;}
+	
+.font13 {
+	font-size:13px;}	
+	
+.font14 {
+	font-size:14px;}
+	
+.font24 {
+	font-size:24px;}		
+	
+.wrapper {
+	width:80%;}
+	
+.infoRight h1 {
+	font-size:24px;}
+
+/*	
+.infoRight p  {
+	font-size:14px;}
+	
+.infoRight table tr td:first-child > p {
+		line-height:18px;}
+
+*/
+	
+@media print {
+	
+	
+.wrapper {
+	width:100%;
+	height:297mm}
+
+/*	 
+.infoRight p  {
+	font-size:14px;}
+*/
+	 
+.colorWh {
+	color:#FFF;}
+ }
