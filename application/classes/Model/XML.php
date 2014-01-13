@@ -18,7 +18,7 @@ class Model_XML extends Model {
             array (
             'curr'=>'EUR',
             'plain'=>'1',
-            'onum'=>'372',
+            'onum'=>'',
             'upass'=>'ahMcUUPk4e',
             'uname'=>'netforms.eur',
             'command'=>'daccount',
