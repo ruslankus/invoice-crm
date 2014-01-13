@@ -28,9 +28,7 @@ class Controller_Index_Auth extends Controller_Base {
         
          //Получаем балланс фирмы и пишем его в сеесию
             $ball = Model::factory('XML')->get_firm_ballance();
-            
-            
-                        
+                      
             $data =  simplexml_load_string($ball);
             
             $money = (float)$data->credit;
