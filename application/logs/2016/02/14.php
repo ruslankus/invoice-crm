@@ -1,0 +1,46 @@
+<?php defined('SYSPATH') OR die('No direct script access.'); ?>
+
+2016-02-14 08:46:52 --- EMERGENCY: Database_Exception [ 8192 ]: mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 67 ] in /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php:171
+2016-02-14 08:46:52 --- DEBUG: #0 /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php(171): Kohana_Database_MySQL->connect()
+#1 /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php(359): Kohana_Database_MySQL->query(1, 'SHOW FULL COLUM...', false)
+#2 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(1668): Kohana_Database_MySQL->list_columns('companies')
+#3 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(444): Kohana_ORM->list_columns()
+#4 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(389): Kohana_ORM->reload_columns()
+#5 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(254): Kohana_ORM->_initialize()
+#6 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(46): Kohana_ORM->__construct(NULL)
+#7 /Applications/MAMP/htdocs/lime.local/application/classes/Controller/Index/Main.php(26): Kohana_ORM::factory('Company')
+#8 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Controller.php(84): Controller_Index_Main->action_index()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index_Main))
+#11 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 /Applications/MAMP/htdocs/lime.local/index.php(118): Kohana_Request->execute()
+#14 {main} in /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php:171
+2016-02-14 08:47:25 --- EMERGENCY: Database_Exception [ 2 ]: mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) ~ MODPATH/database/classes/Kohana/Database/MySQL.php [ 67 ] in /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php:171
+2016-02-14 08:47:25 --- DEBUG: #0 /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php(171): Kohana_Database_MySQL->connect()
+#1 /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php(359): Kohana_Database_MySQL->query(1, 'SHOW FULL COLUM...', false)
+#2 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(1668): Kohana_Database_MySQL->list_columns('companies')
+#3 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(444): Kohana_ORM->list_columns()
+#4 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(389): Kohana_ORM->reload_columns()
+#5 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(254): Kohana_ORM->_initialize()
+#6 /Applications/MAMP/htdocs/lime.local/modules/orm/classes/Kohana/ORM.php(46): Kohana_ORM->__construct(NULL)
+#7 /Applications/MAMP/htdocs/lime.local/application/classes/Controller/Index/Main.php(26): Kohana_ORM::factory('Company')
+#8 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Controller.php(84): Controller_Index_Main->action_index()
+#9 [internal function]: Kohana_Controller->execute()
+#10 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index_Main))
+#11 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#12 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#13 /Applications/MAMP/htdocs/lime.local/index.php(118): Kohana_Request->execute()
+#14 {main} in /Applications/MAMP/htdocs/lime.local/modules/database/classes/Kohana/Database/MySQL.php:171
+2016-02-14 09:29:14 --- EMERGENCY: ErrorException [ 2 ]: opendir(/Applications/MAMP/htdocs/lime.local/modules/mpdf/vendor/mpdf/tmp): failed to open dir: No such file or directory ~ MODPATH/mpdf/vendor/mpdf/mpdf.php [ 7104 ] in file:line
+2016-02-14 09:29:14 --- DEBUG: #0 [internal function]: Kohana_Core::error_handler(2, 'opendir(/Applic...', '/Applications/M...', 7104, Array)
+#1 /Applications/MAMP/htdocs/lime.local/modules/mpdf/vendor/mpdf/mpdf.php(7104): opendir('/Applications/M...')
+#2 /Applications/MAMP/htdocs/lime.local/modules/mpdf/classes/View/mPDF/Core.php(82): mPDF->Output('media/pdf/LIMA1...', 'F')
+#3 /Applications/MAMP/htdocs/lime.local/application/classes/Controller/Index/Invoice.php(350): View_mPDF_Core->write_to_disk('media/pdf/LIMA1...')
+#4 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Controller.php(84): Controller_Index_Invoice->action_generate()
+#5 [internal function]: Kohana_Controller->execute()
+#6 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request/Client/Internal.php(97): ReflectionMethod->invoke(Object(Controller_Index_Invoice))
+#7 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request/Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#8 /Applications/MAMP/htdocs/lime.local/system/classes/Kohana/Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#9 /Applications/MAMP/htdocs/lime.local/index.php(118): Kohana_Request->execute()
+#10 {main} in file:line

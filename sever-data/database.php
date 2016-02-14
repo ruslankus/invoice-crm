@@ -19,9 +19,9 @@ return array
 			 * Ports and sockets may be appended to the hostname.
 			 */
 			'hostname'   => 'localhost',
-			'database'   => 'lime',
-			'username'   => 'root',
-			'password'   => 'mysql',
+			'database'   => 'goodpric_lime',
+			'username'   => 'goodpric_lime',
+			'password'   => 'MuzgasGlidiksPramarsuoti',
 			'persistent' => FALSE,
 		),
 		'table_prefix' => '',

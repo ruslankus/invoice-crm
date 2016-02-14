@@ -106,7 +106,7 @@ if (isset($_SERVER['KOHANA_ENV']))
 Cookie::$salt = '123456';
  
 Kohana::init(array(
-	'base_url'   => 'http://lime.local',
+	'base_url'   => 'http://lime.prophp.eu',
     'index_file' => false,
 
 ));
