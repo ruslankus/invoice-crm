@@ -18,7 +18,7 @@ return array
 			 *
 			 * Ports and sockets may be appended to the hostname.
 			 */
-			'hostname'   => 'localhost',
+			'hostname'   => '172.18.0.1:33063',
 			'database'   => 'lime',
 			'username'   => 'root',
 			'password'   => 'mysql',

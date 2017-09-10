@@ -2,13 +2,13 @@
 <html>
 <head>
     
-     <?foreach ($styles as $file_style):?>
+     <?php foreach ($styles as $file_style): ?>
         <?=HTML::style($file_style)?>
-    <?endforeach?>
+    <?php endforeach?>
     
-    <?foreach ($scripts as $file_script):?>
+    <?php foreach ($scripts as $file_script):?>
         <?=HTML::script($file_script)?>
-    <?endforeach?>
+    <?php endforeach ?>
 
 <title>MY CMR</title>
 </head>

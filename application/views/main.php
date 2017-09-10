@@ -105,9 +105,17 @@
                    <?php foreach($firms as $num => $item):?>
                    <tr>
                         <td><?=$num + 1 ?></td>
-                        <td><a href="<?URL::base()?>/main/firm/<?=$item->id?>"><?=$item->name?></a></td>
+                        <td><a href="<?=URL::base()?>main/firm/<?=$item->id?>"><?=$item->name?></a></td>
                         <td><?=$item->cards->find_all()->count()?></td>
-                        <td><a href="<?=URL::base()?>main/firm_edit/<?=$item->id?>" class="btn btn-mini btn-success"><i class="icon-edit icon-white" ></i>редактировать</a> <a href="<?=URL::base()?>invoice/info/<?=$item->id?>" class="btn btn-mini btn-primary"><i class="icon-print icon-white"></i>инвойс</a> </td>
+                        <td>
+                            <a href="<?=URL::base()?>main/firm_edit/<?=$item->id?>" class="btn btn-mini btn-success">
+                                <i class="icon-edit icon-white" ></i>редактировать
+                            </a>
+                            <a href="<?=URL::base(true, true)?>invoice/info/<?=$item->id?>" class="btn btn-mini btn-primary">
+                                <i class="icon-print icon-white">
+
+                                </i>инвойс</a>
+                        </td>
                     </tr>
                     <?php endforeach;?>  
                 </tbody>

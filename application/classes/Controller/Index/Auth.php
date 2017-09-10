@@ -25,15 +25,20 @@ class Controller_Index_Auth extends Controller_Base {
             Controller::redirect(URL::base());
         }
         
-        
+
          //Получаем балланс фирмы и пишем его в сеесию
+        $money = 0;
+        try {
             $ball = Model::factory('XML')->get_firm_ballance();
-                      
-            $data =  simplexml_load_string($ball);
-            
+
+            $data = simplexml_load_string($ball);
+
             $money = (float)$data->credit;
-           
-            $this->session->set('ballance',$money);
+        }catch (Exception $e){
+            $money = 999;
+        }
+
+        $this->session->set('ballance',$money);
         
         
         if(isset($_POST['submit'])){

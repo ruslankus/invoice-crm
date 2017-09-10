@@ -106,7 +106,7 @@ if (isset($_SERVER['KOHANA_ENV']))
 Cookie::$salt = '123456';
  
 Kohana::init(array(
-	'base_url'   => 'http://lime.local',
+	'base_url'   => 'http://localhost/',
     'index_file' => false,
 
 ));
@@ -153,8 +153,16 @@ Route::set('widgets', 'widgets(/<controller>(/<param>))', array('param' => '.+')
 
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
+    ->defaults(array(
         'directory' => 'index',
-		'controller' => 'main',
-		'action'     => 'index',
-	));
+        'controller' => 'main',
+        'action'     => 'index',
+    ));
+
+
+
+
+
+
+
+
